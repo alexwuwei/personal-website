@@ -30,6 +30,11 @@ gulp.task('copy-media', () => {
     .pipe(gulp.dest(output));
 });
 
+gulp.task('copy-particles', () => {
+  gulp.src('dev/vendor/particles.js')
+  .pipe(gulp.dest(output));
+})
+
 gulp.task('webpack', () => {
   return gulp.src(__dirname + '/dev/entry.js')
   .pipe(webpack({
@@ -57,6 +62,7 @@ gulp.task('watch', () =>{
   gulp.watch(jsPaths, ['webpack']);
   gulp.watch(htmlPaths, ['copy-html']);
   gulp.watch(mediaPaths, ['copy-media']);
+  gulp.watch('dev/vendor/particles.js', ['copy-particles']);
 });
 
-gulp.task('default', ['del-public', 'webpack', 'copy-html', 'copy-media', 'sass', 'watch']);
+gulp.task('default', ['del-public', 'webpack', 'copy-html', 'copy-media', 'copy-particles', 'sass', 'watch']);

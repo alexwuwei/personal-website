@@ -1,5 +1,4 @@
-angular.module('RouteModule',
-[require('angular-route')])
+angular.module('RouteModule', [require('angular-route')])
 .config(['$routeProvider', function(route) {
   route
     .when('/landing', {
@@ -13,5 +12,8 @@ angular.module('RouteModule',
     })
     .when('/contact', {
       templateUrl:'./contact-view.html'
+    })
+    .otherwise({
+      redirectTo:'/landing'
     })
 }])

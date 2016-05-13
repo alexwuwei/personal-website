@@ -3,5 +3,5 @@
 const angular = require('angular');
 
 (function() {
-  angular.module('app', ['ProjectModule', 'RouteModule']);
+  angular.module('App', ['RouteModule', 'ProjectModule']);
 })();

@@ -9,15 +9,18 @@ angular.module('ProjectModule', [])
     this.projects[{
       name: 'SirenFinder',
       summary: 'some summary',
-      description: 'some description'
+      description: 'some description',
+      image: 'img/'
     },{
       name: 'SirenFinder',
       summary: 'some summary',
-      description: 'some description'
+      description: 'some description',
+      image: 'img/'
     },{
       name: 'SirenFinder',
       summary: 'some summary',
-      description: 'some description'
+      description: 'some description',
+      image: 'img/'
     }];
 
 
