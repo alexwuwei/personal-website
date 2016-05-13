@@ -50,8 +50,8 @@
 
 	__webpack_require__(3);
 	__webpack_require__(6);
-	// require('./vendor/particles');
 	__webpack_require__(7);
+	__webpack_require__(8);
 
 
 /***/ },
@@ -32034,6 +32034,15 @@
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+	particlesJS.load('particles-js', './particles.json', function() {
+	  console.log('callback - particles.js config loaded');
+	});
+
+
+/***/ },
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
