@@ -6,9 +6,9 @@ let del = require('del');
 let sass = require('gulp-sass');
 
 let jsPaths   = ['*.js', 'dev/**/*.js'];
-let htmlPaths = ['dev/**/*.html'];
+let htmlPaths = ['dev/**/*.html', 'dev/*.html'];
 let scssPaths = ['dev/style/*.scss'];
-let cssPaths = ['dev/style/*.css']
+let cssPaths = ['dev/styles/*.css']
 let mediaPaths = ['dev/img/*'];
 let output = __dirname + '/public/';
 
@@ -52,6 +52,7 @@ gulp.task('webpack', () => {
 
 gulp.task('sass', function() {
   return gulp.src(scssPaths)
+  // .pipe(rename({dirname: '/css'}))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(output + 'css'));
 });
@@ -69,6 +70,7 @@ gulp.task('watch', () =>{
   gulp.watch(mediaPaths, ['copy-media']);
   gulp.watch('dev/vendor/particles.json', ['copy-json']);
   gulp.watch('dev/vendor/particles.js', ['copy-particles']);
+  gulp.watch('dev/styles/*.css', ['copy-css']);
 });
 
-gulp.task('default', ['del-public', 'webpack', 'copy-html', 'copy-media', 'copy-json', 'copy-particles', 'sass', 'watch']);
+gulp.task('default', ['del-public', 'webpack', 'copy-html',  'copy-media', 'copy-json', 'copy-particles', 'sass', 'copy-css', 'watch']);

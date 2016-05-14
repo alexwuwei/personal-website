@@ -1,0 +1,39 @@
+h4 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #B24800;
+}
+
+h1 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 56px;
+  letter-spacing: 4px;
+  color: beige;
+}
+
+a {
+  text-decoration: none;
+  color: #00EFFF;
+  font-size: 18px;
+}
+.landing-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 20%;
+}
+
+.customNav {
+  width: 50%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}

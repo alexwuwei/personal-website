@@ -51,7 +51,9 @@
 	__webpack_require__(3);
 	__webpack_require__(6);
 	__webpack_require__(7);
+
 	__webpack_require__(8);
+	__webpack_require__(9);
 
 
 /***/ },
@@ -32004,14 +32006,20 @@
 /***/ function(module, exports) {
 
 	angular.module('ProjectModule', [])
-	  .controller('ProjectController', [ProjectController]);
+	  .controller('ProjectController', [ProjectController])
+	  .directive('projectRender', function() {
+	    return {
+	      restrict: 'E',
+	      templateUrl: './projects-view.html'
+	    }
+	  });
 
 	  /////////////////////////////
 	  // defines controller
 	  ////////////////////////////
 
 	  function ProjectController() {
-	    this.projects[{
+	    this.projects = [{
 	      name: 'SirenFinder',
 	      summary: 'some summary',
 	      description: 'some description',
@@ -32036,9 +32044,14 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	particlesJS.load('particles-js', './particles.json', function() {
-	  console.log('callback - particles.js config loaded');
-	});
+	angular.module('NavModule', [])
+	  .directive('customNav', function() {
+	    return {
+	      restrict: 'E',
+	      replace: true,
+	      templateUrl: './nav-view.html'
+	    };
+	  });
 
 
 /***/ },
@@ -32050,8 +32063,124 @@
 	const angular = __webpack_require__(1);
 
 	(function() {
-	  angular.module('App', ['RouteModule', 'ProjectModule']);
+	  angular.module('App', ['RouteModule', 'NavModule', 'ProjectModule']);
 	})();
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	particlesJS("particles-js", {
+	  "particles": {
+	    "number": {
+	      "value": 52,
+	      "density": {
+	        "enable": false,
+	        "value_area": 800
+	      }
+	    },
+	    "color": {
+	      "value": "#ffffff"
+	    },
+	    "shape": {
+	      "type": "circle",
+	      "stroke": {
+	        "width": 0,
+	        "color": "#000000"
+	      },
+	      "polygon": {
+	        "nb_sides": 5
+	      },
+	      "image": {
+	        "src": "img/github.svg",
+	        "width": 100,
+	        "height": 100
+	      }
+	    },
+	    "opacity": {
+	      "value": 0.5,
+	      "random": false,
+	      "anim": {
+	        "enable": false,
+	        "speed": 1,
+	        "opacity_min": 0.1,
+	        "sync": false
+	      }
+	    },
+	    "size": {
+	      "value": 2,
+	      "random": true,
+	      "anim": {
+	        "enable": false,
+	        "speed": 40,
+	        "size_min": 0.1,
+	        "sync": false
+	      }
+	    },
+	    "line_linked": {
+	      "enable": true,
+	      "distance": 150,
+	      "color": "#ffffff",
+	      "opacity": 0.4,
+	      "width": 1
+	    },
+	    "move": {
+	      "enable": true,
+	      "speed": 3,
+	      "direction": "none",
+	      "random": false,
+	      "straight": false,
+	      "out_mode": "out",
+	      "bounce": false,
+	      "attract": {
+	        "enable": false,
+	        "rotateX": 600,
+	        "rotateY": 1200
+	      }
+	    }
+	  },
+	  "interactivity": {
+	    "detect_on": "canvas",
+	    "events": {
+	      "onhover": {
+	        "enable": false,
+	        "mode": "repulse"
+	      },
+	      "onclick": {
+	        "enable": false,
+	        "mode": "push"
+	      },
+	      "resize": true
+	    },
+	    "modes": {
+	      "grab": {
+	        "distance": 400,
+	        "line_linked": {
+	          "opacity": 1
+	        }
+	      },
+	      "bubble": {
+	        "distance": 400,
+	        "size": 3.996003996003996,
+	        "duration": 2,
+	        "opacity": 0.903096903096903,
+	        "speed": 3
+	      },
+	      "repulse": {
+	        "distance": 200,
+	        "duration": 0.4
+	      },
+	      "push": {
+	        "particles_nb": 4
+	      },
+	      "remove": {
+	        "particles_nb": 2
+	      }
+	    }
+	  },
+	  "retina_detect": true
+	});
 
 
 /***/ }
