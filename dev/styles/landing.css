@@ -1,17 +1,21 @@
 h4 {
   padding: 0px;
   margin: 0px;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 2px;
   color: #B24800;
+  font-family: roboto;
+  font-weight: bold;
 }
 
 h1 {
   padding: 0px;
   margin: 0px;
-  font-size: 56px;
+  font-size: 58px;
   letter-spacing: 4px;
   color: beige;
+  font-family: roboto-mono;
+  font-weight: bold;
 }
 
 a {
