@@ -51,7 +51,9 @@
 	__webpack_require__(3);
 	__webpack_require__(6);
 	__webpack_require__(7);
+
 	__webpack_require__(8);
+	__webpack_require__(9);
 
 
 /***/ },
@@ -30939,8 +30941,7 @@
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	angular.module('RouteModule',
-	[__webpack_require__(4)])
+	angular.module('RouteModule', [__webpack_require__(4)])
 	.config(['$routeProvider', function(route) {
 	  route
 	    .when('/landing', {
@@ -30954,6 +30955,9 @@
 	    })
 	    .when('/contact', {
 	      templateUrl:'./contact-view.html'
+	    })
+	    .otherwise({
+	      redirectTo:'/landing'
 	    })
 	}])
 
@@ -32002,25 +32006,34 @@
 /***/ function(module, exports) {
 
 	angular.module('ProjectModule', [])
-	  .controller('ProjectController', [ProjectController]);
+	  .controller('ProjectController', [ProjectController])
+	  .directive('projectRender', function() {
+	    return {
+	      restrict: 'E',
+	      templateUrl: './projects-view.html'
+	    }
+	  });
 
 	  /////////////////////////////
 	  // defines controller
 	  ////////////////////////////
 
 	  function ProjectController() {
-	    this.projects[{
+	    this.projects = [{
 	      name: 'SirenFinder',
 	      summary: 'some summary',
-	      description: 'some description'
+	      description: 'some description',
+	      image: 'img/'
 	    },{
 	      name: 'SirenFinder',
 	      summary: 'some summary',
-	      description: 'some description'
+	      description: 'some description',
+	      image: 'img/'
 	    },{
 	      name: 'SirenFinder',
 	      summary: 'some summary',
-	      description: 'some description'
+	      description: 'some description',
+	      image: 'img/'
 	    }];
 
 
@@ -32031,7 +32044,34 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	particlesJS("particles", {
+	angular.module('NavModule', [])
+	  .directive('customNav', function() {
+	    return {
+	      restrict: 'E',
+	      replace: true,
+	      templateUrl: './nav-view.html'
+	    };
+	  });
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	const angular = __webpack_require__(1);
+
+	(function() {
+	  angular.module('App', ['RouteModule', 'NavModule', 'ProjectModule']);
+	})();
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	particlesJS("particles-js", {
 	  "particles": {
 	    "number": {
 	      "value": 52,
@@ -32141,19 +32181,6 @@
 	  },
 	  "retina_detect": true
 	});
-
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	const angular = __webpack_require__(1);
-
-	(function() {
-	  angular.module('app', ['ProjectModule', 'RouteModule']);
-	})();
 
 
 /***/ }

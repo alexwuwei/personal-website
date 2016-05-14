@@ -3,15 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Hugo A Guerra - Personal Portfolio & Website</title>
-    <link href='https://fonts.googleapis.com/css?family=Lora|Roboto' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lora|Roboto' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="./css/base.css" >
     <link rel="stylesheet" href="./css/module-landing.css" >
     <link rel="stylesheet" href="./css/module-main.css" >
     <link rel="stylesheet" href="./css/module-header.css" >
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css" >
+    <link rel="stylesheet" href="./css/landing.css" >
+    <link rel="stylesheet" href="./css/projects.css" >
+    <link rel="stylesheet" href="./css/snow.css" >
+
   </head>
-  <body ng-app="app">
-{{hello}}
+  <body ng-app="App" ng-view>
+
+    <!-- <main ng-view> -->
+    <!-- <div id="particles-js">
+
+    </div> -->
+
+      <landing-render></landing-render>
+      <project-render></project-render>
+    <!-- </main> -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script type="text/javascript" src="bundle.js"></script>
   </body>
 </html>
