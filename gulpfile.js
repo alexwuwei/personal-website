@@ -7,7 +7,7 @@ let sass = require('gulp-sass');
 
 let jsPaths   = ['*.js', 'dev/**/*.js'];
 let htmlPaths = ['dev/**/*.html', 'dev/*.html'];
-let scssPaths = ['dev/style/*.scss'];
+let scssPaths = ['dev/styles/*.scss'];
 let cssPaths = ['dev/styles/*.css']
 let mediaPaths = ['dev/img/*'];
 let output = __dirname + '/public/';

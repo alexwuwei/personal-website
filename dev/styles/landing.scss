@@ -1,9 +1,12 @@
+$primary-color: #00EFFF;
+$secondary-color: #B24800;
+
 h4 {
   padding: 0px;
   margin: 0px;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #B24800;
+  color: $secondary-color;
   font-family: roboto;
   font-weight: bold;
 }
@@ -20,7 +23,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #00EFFF;
+  color: $primary-color;
   font-size: 18px;
 }
 .landing-box {
@@ -30,6 +33,9 @@ a {
   width: 70%;
   margin-left: 15%;
   margin-top: 20%;
+  @media all and (max-width: 500px) {
+    text-align: center;
+  }
 }
 
 .customNav {
@@ -40,4 +46,23 @@ a {
   flex-direction: row;
   justify-content: space-between;
   font-weight: bold;
+  font-family: roboto-mono;
+  a {
+    font-size: 28px;
+  }
+  a:hover {
+    font-size: 30px;
+    border: 1px solid $secondary-color;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+
+  }
+  @media all and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
+// .customNav a {
+// }

@@ -1,4 +1,8 @@
-.snow-container {
+///////////////////////
+// mixins
+//////////////////////
+
+@mixin snow-config {
   position: absolute;
   width: 100%;
   max-width: 100%;
@@ -11,18 +15,22 @@
   background-color: #18acb6;
 }
 
+.snow-container {
+@include snow-config;
+}
+
 .snow-container-2 {
-  position: absolute;
-  width: 100%;
-  max-width: 100%;
-  height: 35%;
-  max-height: 35%;
-  top: 0;
-  overflow: hidden;
-  z-index: -1;
-  pointer-events: none;
-  background-color: #18acb6;
-  border-bottom: 5px solid #B24800;
+ position: absolute;
+ width: 100%;
+ max-width: 100%;
+ height: 35%;
+ max-height: 35%;
+ top: 0;
+ overflow: hidden;
+ z-index: -1;
+ pointer-events: none;
+ background-color: #18acb6;
+ border-bottom: 5px solid #B24800;
 }
 
 .snow {

@@ -1,5 +1,4 @@
 <section class="projects-box" ng-controller="ProjectController as projctrl">
-  <custom-nav></custom-nav>
   <div class="snow-container-2">
   <div class="snow foreground"></div>
   <div class="snow foreground layered"></div>
@@ -7,15 +6,17 @@
   <div class="snow middleground layered"></div>
   <div class="snow background"></div>
   <div class="snow background layered"></div>
+  <custom-nav></custom-nav>
   </div>
   <main class="projects-container">
-    <section ng-repeat="project in projctrl.projects">
+    <section class="project-instance" ng-repeat="project in projctrl.projects">
       <h2>{{project.name}}</h2>
       <h4>{{project.summary}}</h4>
       <p>
         {{project.description}}
       </p>
       <img src="{{project.image}}" alt="" />
+
 
     </section>
   </main>

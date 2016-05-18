@@ -1,9 +1,0 @@
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 19%; /*change margin to non percentage*/
-  align-items: center;
-  width: 70%;
-  border: 1px dotted blue;
-  margin-left: 15%;
-}
