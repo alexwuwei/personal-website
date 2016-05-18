@@ -1,24 +1,29 @@
 .projects-box {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .projects-container {
   /*position: absolute;*/
   display: flex;
   flex-direction: column;
-  margin-top: 260px;
-  /*change margin to non percentage*/
+  margin-top: 260px; /*change margin to non percentage*/
   align-items: center;
   width: 70%;
-  margin-left: 15%; }
+  margin-left: 15%;
+}
 
 .project-instance {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
   @media all and (max-width: 500px) {
-    .project-instance p {
-      max-width: 80%; }
-    .project-instance h2 h4 {
-      max-width: 80%; } }
+    p {
+      max-width: 80%;
+    }
+    h2 h4 {
+      max-width: 80%;
+    }
+  }
+}

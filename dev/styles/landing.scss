@@ -1,11 +1,15 @@
+$primary-color: #00EFFF;
+$secondary-color: #B24800;
+
 h4 {
   padding: 0px;
   margin: 0px;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #B24800;
+  color: $secondary-color;
   font-family: roboto;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 h1 {
   padding: 0px;
@@ -14,23 +18,25 @@ h1 {
   letter-spacing: 4px;
   color: beige;
   font-family: roboto-mono;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 a {
   text-decoration: none;
-  color: #00EFFF;
-  font-size: 18px; }
-
+  color: $primary-color;
+  font-size: 18px;
+}
 .landing-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 70%;
   margin-left: 15%;
-  margin-top: 20%; }
+  margin-top: 20%;
   @media all and (max-width: 500px) {
-    .landing-box {
-      text-align: center; } }
+    text-align: center;
+  }
+}
 
 .customNav {
   width: 50%;
@@ -40,16 +46,23 @@ a {
   flex-direction: row;
   justify-content: space-between;
   font-weight: bold;
-  font-family: roboto-mono; }
-  .customNav a {
-    font-size: 28px; }
-  .customNav a:hover {
+  font-family: roboto-mono;
+  a {
+    font-size: 28px;
+  }
+  a:hover {
     font-size: 30px;
-    border: 1px solid #B24800;
+    border: 1px solid $secondary-color;
     padding-left: 5px;
     padding-right: 5px;
-    border-radius: 10px; }
+    border-radius: 10px;
+
+  }
   @media all and (max-width: 500px) {
-    .customNav {
-      flex-direction: column;
-      align-items: center; } }
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// .customNav a {
+// }
