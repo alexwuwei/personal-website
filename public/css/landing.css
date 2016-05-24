@@ -48,7 +48,9 @@ a {
     border: 1px solid #B24800;
     padding-left: 5px;
     padding-right: 5px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    -webkit-transition: font-size 1s;
+    -webkit-transition: border 1s; }
   @media all and (max-width: 500px) {
     .customNav {
       flex-direction: column;
